@@ -1,0 +1,4 @@
+sudo apt update
+sudo apt install git mysql-client -y
+git clone https://github.com/moaf92/Terraform-project.git
+mysql -h ${rds-endpoint} -u ${dbuser} --password=${dbpass} accounts --ssl-mode=DISABLED < /home/ubuntu/Terraform-project/src/main/resources/db_backup.sql
